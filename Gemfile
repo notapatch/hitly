@@ -35,6 +35,9 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Allows testing by stimulating interactions with your app
   gem 'capybara'
+  # All runtime config comes from the UNIX environment but we
+  # use dotenv to store that in files for development and testing
+  gem 'dotenv-rails'
   # factory replacement for fixtures
   gem 'factory_bot_rails'
   # generating random test data
