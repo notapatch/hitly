@@ -32,6 +32,10 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # traditional one-line-per-event format
 gem 'lograge'
 
+#
+# Takes SVG document from assets and inerts it into the view code
+gem 'inline_svg', '~> 1.7.0'
+
 group :development, :test do
   # Way of generating boilerplate code for common gems
   gem 'boring_generators'
