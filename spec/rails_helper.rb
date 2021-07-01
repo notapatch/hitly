@@ -78,4 +78,8 @@ RSpec.configure do |config|
       driven_by :selenium_chrome_headless
     end
   end
+
+  # Devise helper methods for auto-logging in during tests
+  config.include Devise::Test::IntegrationHelpers, type: :request
+  config.include Devise::Test::IntegrationHelpers, type: :system
 end
