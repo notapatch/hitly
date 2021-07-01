@@ -37,6 +37,8 @@ group :development, :test do
   gem 'capybara'
   # factory replacement for fixtures
   gem 'factory_bot_rails'
+  # generating random test data
+  gem 'faker'
   # Popular Rails testing framework
   gem 'rspec-rails', '~> 5.0.0'
 end
