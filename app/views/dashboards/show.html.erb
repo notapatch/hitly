@@ -33,7 +33,7 @@
                 <%= link_to link.long_url, link.long_url %>
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm text-red-500">
-                <%= link_to short_url(link.id), short_url(link.id) %>
+                <%= link_to short_url(link.id), short_url(link.id), data: { turbolinks: false } %>
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                 <%= link_to link.hit_counts %>
