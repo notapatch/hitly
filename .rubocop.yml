@@ -18,6 +18,10 @@ AllCops:
     - test/**/*
     - vendor/bundle/**/*
 
+Rails/SkipsModelValidations:
+  Exclude:
+    - app/services/redirections_show.rb
+
 Metrics/BlockLength:
   Enabled: false
 

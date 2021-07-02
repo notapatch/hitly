@@ -36,7 +36,7 @@
                 <%= link_to short_url(link.id), short_url(link.id) %>
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                8
+                <%= link_to link.hit_counts %>
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                 <%= time_ago_in_words(link.created_at) %>

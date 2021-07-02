@@ -4,7 +4,8 @@ class RedirectionsShow
 
     link = Link.find_by(id: id)
     if link
-      Result.new(found: true, link: link)
+      Link.increment_counter(:hit_counts, link.id, touch: true)
+      Result.new(found: true, link: link.reload)
     else
       Result.new(found: false, link: nil)
     end
