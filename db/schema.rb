@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_02_135210) do
+ActiveRecord::Schema.define(version: 2021_07_08_163450) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,17 +22,6 @@ ActiveRecord::Schema.define(version: 2021_07_02_135210) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "hit_counts", default: 0, null: false
     t.index ["user_id"], name: "index_links_on_user_id"
-  end
-
-  create_table "products", force: :cascade do |t|
-    t.text "title", null: false
-    t.text "description", null: false
-    t.text "image_url", null: false
-    t.decimal "price", precision: 8, scale: 2, null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["title"], name: "index_products_on_title", unique: true
-    t.check_constraint "price >= 0.01", name: "price_must_be_positive"
   end
 
   create_table "users", force: :cascade do |t|
