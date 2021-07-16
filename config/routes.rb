@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root "homes#show"
   resource :dashboards, only: %i[show]
-  resources :links, only: %i[new create]
+  resources :links, only: %i[new create show]
 
   #
   # DANGER
